@@ -1,6 +1,6 @@
 package com.example.ggrascantou.calculadoramvp.presenter;
 
-public interface MainActivityPrensenter {
+public interface MainActivityPresenter {
     void sumar(String number1, String number2); // interactor
 
     void showError(String error); // View

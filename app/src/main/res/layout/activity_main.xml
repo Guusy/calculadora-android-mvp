@@ -1,43 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.MainActivity"
+    android:orientation="vertical"
+    >
 
     <EditText
         android:id="@+id/editNumber1"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="number1"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="32dp" />
+        android:hint="Numero 1" />
 
     <EditText
         android:id="@+id/editNumber2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="number2"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="32dp" />
+        android:hint="Numero 2" />
 
     <Button
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="98dp"
         android:text="@string/button_text"
         android:onClick="suma"
         />
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="184dp"
         android:text="@string/result"
         />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
