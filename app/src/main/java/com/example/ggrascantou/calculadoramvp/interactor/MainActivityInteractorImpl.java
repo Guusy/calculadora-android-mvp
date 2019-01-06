@@ -12,7 +12,12 @@ public class MainActivityInteractorImpl implements MainActivityInteractor {
 
     @Override
     public void sumar(String number1, String number2) {
-        Double resultado =  Double.valueOf(number1) + Double.valueOf(number1);
-        presenter.showResult(String.valueOf(resultado));
+        try {
+            Double resultado =  Double.valueOf(number1) + Double.valueOf(number1);
+            presenter.showResult(String.valueOf(resultado));
+        }catch (NumberFormatException e){
+            presenter.showError("El formato de los numeros no es el correcto");
+
+        }
     }
 }

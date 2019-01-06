@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
 
     private EditText edtNumber1;
     private EditText edtNumber2;
-    private TextView resultado;
+    private TextView tvresultado;
+    private TextView tverror;
 
     private MainActivityPresenter presenter;
 
@@ -22,9 +23,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edtNumber1 =  (EditText) findViewById(R.id.editNumber1);
-        edtNumber2 =  (EditText) findViewById(R.id.editNumber2);
-        resultado = findViewById(R.id.result);
+        edtNumber1 = findViewById(R.id.editNumber1);
+        edtNumber2 = findViewById(R.id.editNumber2);
+        tvresultado = findViewById(R.id.result);
+        tverror = findViewById(R.id.error);
         presenter = new MainActivityPresenterImpl(this);
     }
 
@@ -36,11 +38,14 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
 
     @Override
     public void showResult(String result) {
-        resultado.setText(result);
+        tvresultado.setText(result);
+        tverror.setText("");
+
     }
 
     @Override
     public void showError(String error) {
-        resultado.setText(error);
+        tverror.setText(error);
+        tvresultado.setText("");
     }
 }
